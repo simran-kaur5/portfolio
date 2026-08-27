@@ -528,9 +528,9 @@ function App() {
 
           <div className="contact-buttons">
 
-            <a href="simranjit26x@gmail.com">
-              Email me ↗
-            </a>
+            <button onClick={() => window.location.href = "mailto:simranjitk26x@gmail.com"}>
+          Email
+        </button>
 
             <a
               href="https://www.linkedin.com/in/simranjit-kaur-15488331b/"
