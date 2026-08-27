@@ -1,16 +1,44 @@
-# React + Vite
+# Simranjit Kaur — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal portfolio website showcasing my projects, skills, education, and experience.
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+I am a Computer Science Engineering student interested in:
 
-## React Compiler
+- Artificial Intelligence & Machine Learning
+- Software Engineering
+- Data Science
+- Data Structures & Algorithms
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Projects
 
-## Expanding the Oxlint configuration
+Some of my featured projects:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **SnapClass** — AI-based attendance management system
+- **AI Gym Trainer** — AI-powered exercise form analysis
+- **PDF RAG** — Document question-answering system using RAG
+- **DQN** — Deep Reinforcement Learning project
+- **House Price Prediction**
+- **Sales Forecasting Dashboard**
+
+## Skills
+
+**Languages:** Python, C++, JavaScript
+
+**AI/ML:** PyTorch, Scikit-learn, NumPy, Pandas
+
+**Web:** HTML, CSS, JavaScript, React
+
+**Database:** MySQL, PostgreSQL, Supabase
+
+**Core CS:** DSA, OOP, DBMS, Operating Systems, Computer Networks
+
+## Education
+
+**B.Tech — Computer Science & Engineering**  
+Guru Nanak Dev Engineering College, Ludhiana
+
+## GitHub
+
+https://github.com/simran-kaur5
