@@ -35,6 +35,17 @@ const projects = [
   },
 
   {
+    title: "VidQuer",
+    category: "AI / LLM",
+    year: "2026",
+    description:
+      "An Agentic AI-powered YouTube video analyzer that generates concise explanations from video transcripts and lets users ask questions about the video content.",
+    tech: ["Agno", "Groq", "ChromaDB", "RAG", "Streamlit"],
+    link: "https://vidquery-ai.streamlit.app/",
+    linkText: "Live Demo ↗"
+  },
+
+  {
     title: "PDF RAG + Groq",
     category: "Generative AI",
     description:
@@ -86,6 +97,7 @@ function App() {
   const categories = [
     "All",
     "AI / ML",
+    "AI / LLM",
     "Generative AI",
     "Computer Vision",
     "Reinforcement Learning",
