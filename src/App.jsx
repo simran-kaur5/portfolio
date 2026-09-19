@@ -277,7 +277,7 @@ function App() {
             </div>
 
             <div className="stat">
-              <strong>460+</strong>
+              <strong>500+</strong>
               <span>DSA Problems</span>
             </div>
 
