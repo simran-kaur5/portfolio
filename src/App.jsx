@@ -309,7 +309,7 @@ function App() {
           <div className="stats">
 
             <div className="stat">
-              <strong>8.83</strong>
+              <strong>8.74</strong>
               <span>CGPA / 10</span>
             </div>
 
@@ -511,7 +511,7 @@ function App() {
               </span>
 
               <strong>
-                8.83
+                8.74
               </strong>
 
               <small>
