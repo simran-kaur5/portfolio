@@ -518,7 +518,6 @@ a {
 }
 
 .section-description {
-  max-width: 560px;
 
   margin-top: -20px;
 
@@ -905,10 +904,6 @@ a {
 }
 
 
-/* =========================================
-   CONTACT
-========================================= */
-
 .contact-section {
   width: 100%;
 
@@ -995,11 +990,6 @@ a {
   color: #2563eb;
   border-color: white;
 }
-
-
-/* =========================================
-   FOOTER
-========================================= */
 
 footer {
   width: min(100% - 40px, var(--container));
