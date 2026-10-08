@@ -3,6 +3,25 @@ import "./App.css";
 
 const projects = [
   {
+    title: "Stayora",
+    category: "Full Stack",
+    description:
+      "A full-stack Airbnb-style rental platform where users can discover, create, manage and review property listings, with maps, image uploads, authentication and an AI-powered listing assistant.",
+    tech: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "EJS",
+      "Bootstrap",
+      "Mapbox",
+      "Cloudinary",
+      "Groq",
+    ],
+    link: "https://stayora-0xpm.onrender.com",
+    linkText: "Live Demo ↗",
+  },
+
+  {
     title: "SnapClass",
     category: "AI / ML",
     description:
@@ -12,7 +31,7 @@ const projects = [
       "SVM",
       "Face Recognition",
       "Streamlit",
-      "Supabase"
+      "Supabase",
     ],
     link: "https://smart-snapclass.streamlit.app/",
     linkText: "Live Demo ↗",
@@ -22,13 +41,13 @@ const projects = [
     title: "AI Gym Trainer",
     category: "Computer Vision",
     description:
-      "An AI-powered fitness trainer that uses computer vision to analyse exercises and provide an interactive workout experience.",
+      "An AI-powered fitness trainer that uses computer vision to analyse exercises, count repetitions and provide an interactive workout experience.",
     tech: [
       "Python",
       "OpenCV",
+      "MediaPipe",
       "Computer Vision",
-      "AI",
-      "Streamlit"
+      "Streamlit",
     ],
     link: "https://real-ai-gym-trainer.streamlit.app/",
     linkText: "Live Demo ↗",
@@ -37,12 +56,17 @@ const projects = [
   {
     title: "VidQuer",
     category: "AI / LLM",
-    year: "2026",
     description:
-      "An Agentic AI-powered YouTube video analyzer that generates concise explanations from video transcripts and lets users ask questions about the video content.",
-    tech: ["Agno", "Groq", "ChromaDB", "RAG", "Streamlit"],
+      "An Agentic AI-powered YouTube video analyzer that generates concise explanations from video transcripts and lets users ask questions about video content.",
+    tech: [
+      "Agno",
+      "Groq",
+      "ChromaDB",
+      "RAG",
+      "Streamlit",
+    ],
     link: "https://vidquery-ai.streamlit.app/",
-    linkText: "Live Demo ↗"
+    linkText: "Live Demo ↗",
   },
 
   {
@@ -56,7 +80,7 @@ const projects = [
       "ChromaDB",
       "Sentence Transformers",
       "Groq",
-      "FastAPI"
+      "FastAPI",
     ],
     link: "https://github.com/simran-kaur5/pdf-rag-groq",
     linkText: "GitHub ↗",
@@ -64,14 +88,14 @@ const projects = [
 
   {
     title: "DQN / Deep Learning",
-    category: "Reinforcement Learning",
+    category: "Deep Learning",
     description:
-      "Deep learning experiments including exploration of neural networks and reinforcement learning concepts using Python and PyTorch.",
+      "Deep learning experiments exploring neural networks and reinforcement learning concepts using Python and PyTorch.",
     tech: [
       "Python",
       "PyTorch",
-      "DQN",
-      "Deep Learning"
+      "Deep Learning",
+      "Neural Networks",
     ],
     link: "https://github.com/simran-kaur5/AI-ML-Projects/tree/main/Deep%20Learning",
     linkText: "GitHub ↗",
@@ -85,10 +109,10 @@ const experience = [
     date: "Jun 2026 – Jul 2026",
   },
   {
-    company: "ALert Enterprise",
+    company: "Alert Enterprise",
     role: "Software Engineer Intern",
     date: "Internship",
-  }
+  },
 ];
 
 function App() {
@@ -96,11 +120,12 @@ function App() {
 
   const categories = [
     "All",
+    "Full Stack",
     "AI / ML",
     "AI / LLM",
     "Generative AI",
     "Computer Vision",
-    "Reinforcement Learning",
+    "Deep Learning",
   ];
 
   const filteredProjects =
@@ -127,13 +152,25 @@ function App() {
           </div>
 
           <div className="nav-links">
-            <button onClick={() => scrollTo("about")}>About</button>
-            <button onClick={() => scrollTo("projects")}>Projects</button>
+            <button onClick={() => scrollTo("about")}>
+              About
+            </button>
+
+            <button onClick={() => scrollTo("projects")}>
+              Projects
+            </button>
+
             <button onClick={() => scrollTo("experience")}>
               Experience
             </button>
-            <button onClick={() => scrollTo("skills")}>Skills</button>
-            <button onClick={() => scrollTo("contact")}>Contact</button>
+
+            <button onClick={() => scrollTo("skills")}>
+              Skills
+            </button>
+
+            <button onClick={() => scrollTo("contact")}>
+              Contact
+            </button>
           </div>
 
           <a
@@ -248,7 +285,7 @@ function App() {
 
             <h3>
               Computer Science student interested in
-              building practical AI systems.
+              building practical AI and software systems.
             </h3>
 
             <p>
@@ -258,8 +295,8 @@ function App() {
 
             <p>
               My interests span machine learning, generative AI,
-              computer vision, reinforcement learning and software
-              engineering.
+              computer vision, software engineering and full-stack
+              development.
             </p>
 
             <p>
@@ -277,7 +314,7 @@ function App() {
             </div>
 
             <div className="stat">
-              <strong>500+</strong>
+              <strong>510+</strong>
               <span>DSA Problems</span>
             </div>
 
@@ -304,7 +341,7 @@ function App() {
 
         <p className="section-description">
           Some of the systems and experiments I've worked on while
-          exploring AI and software engineering.
+          exploring AI, software engineering and full-stack development.
         </p>
 
         <div className="filters">
@@ -325,12 +362,15 @@ function App() {
 
           {filteredProjects.map((project, index) => (
 
-            <article className="project-card" key={project.title}>
+            <article
+              className="project-card"
+              key={project.title}
+            >
 
               <div className="project-top">
 
                 <span className="project-number">
-                  0{index + 1}
+                  {String(index + 1).padStart(2, "0")}
                 </span>
 
                 <span className="project-category">
@@ -339,14 +379,26 @@ function App() {
 
               </div>
 
-              <h3>{project.title}</h3>
+              <h3>
+                {project.title}
+              </h3>
 
-              <p>{project.description}</p>
+              {project.year && (
+                <span className="project-year">
+                  {project.year}
+                </span>
+              )}
+
+              <p>
+                {project.description}
+              </p>
 
               <div className="tech">
 
                 {project.tech.map((item) => (
-                  <span key={item}>{item}</span>
+                  <span key={item}>
+                    {item}
+                  </span>
                 ))}
 
               </div>
@@ -382,20 +434,30 @@ function App() {
 
           {experience.map((item, index) => (
 
-            <div className="experience-item" key={item.company}>
+            <div
+              className="experience-item"
+              key={item.company}
+            >
 
               <div className="experience-number">
-                0{index + 1}
+                {String(index + 1).padStart(2, "0")}
               </div>
 
               <div className="experience-info">
 
                 <div>
-                  <h3>{item.role}</h3>
-                  <h4>{item.company}</h4>
+                  <h3>
+                    {item.role}
+                  </h3>
+
+                  <h4>
+                    {item.company}
+                  </h4>
                 </div>
 
-                <span>{item.date}</span>
+                <span>
+                  {item.date}
+                </span>
 
               </div>
 
@@ -444,11 +506,17 @@ function App() {
 
             <div className="education-score">
 
-              <span>CGPA</span>
+              <span>
+                CGPA
+              </span>
 
-              <strong>8.83</strong>
+              <strong>
+                8.83
+              </strong>
 
-              <small>/ 10</small>
+              <small>
+                / 10
+              </small>
 
             </div>
 
@@ -470,48 +538,141 @@ function App() {
 
         <div className="skills-grid">
 
+          {/* LANGUAGES */}
+
           <div className="skill-box">
-            <h3>Languages</h3>
+
+            <h3>
+              Languages
+            </h3>
+
             <div>
               <span>Python</span>
               <span>C++</span>
-              <span>SQL</span>
               <span>JavaScript</span>
+              <span>SQL</span>
             </div>
+
           </div>
 
+
+          {/* FRONTEND */}
+
           <div className="skill-box">
-            <h3>AI / ML</h3>
+
+            <h3>
+              Frontend
+            </h3>
+
             <div>
+              <span>React.js</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Bootstrap</span>
+              <span>Material UI</span>
+            </div>
+
+          </div>
+
+
+          {/* BACKEND */}
+
+          <div className="skill-box">
+
+            <h3>
+              Backend
+            </h3>
+
+            <div>
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>FastAPI</span>
+              <span>REST APIs</span>
+            </div>
+
+          </div>
+
+
+          {/* AI / ML */}
+
+          <div className="skill-box">
+
+            <h3>
+              AI / ML
+            </h3>
+
+            <div>
+              <span>Machine Learning</span>
               <span>PyTorch</span>
               <span>Scikit-learn</span>
-              <span>NLP</span>
-              <span>Computer Vision</span>
               <span>RAG</span>
-              <span>DQN</span>
+              <span>LLM Applications</span>
+              <span>Computer Vision</span>
+              <span>LangChain</span>
+              <span>Agno</span>
             </div>
+
           </div>
 
-          <div className="skill-box">
-            <h3>Development</h3>
-            <div>
-              <span>FastAPI</span>
-              <span>Streamlit</span>
-              <span>Git</span>
-              <span>GitHub</span>
-            </div>
-          </div>
+
+          {/* DATABASES */}
 
           <div className="skill-box">
-            <h3>Data & Databases</h3>
+
+            <h3>
+              Databases
+            </h3>
+
             <div>
-              <span>NumPy</span>
-              <span>Pandas</span>
+              <span>MongoDB</span>
               <span>PostgreSQL</span>
               <span>MySQL</span>
+              <span>SQLite</span>
               <span>Supabase</span>
               <span>ChromaDB</span>
             </div>
+
+          </div>
+
+
+          {/* TOOLS */}
+
+          <div className="skill-box">
+
+            <h3>
+              Tools & Technologies
+            </h3>
+
+            <div>
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>Streamlit</span>
+              <span>WebRTC</span>
+              <span>OpenCV</span>
+              <span>MediaPipe</span>
+              <span>Mapbox</span>
+              <span>Cloudinary</span>
+            </div>
+
+          </div>
+
+
+          {/* CORE CS */}
+
+          <div className="skill-box">
+
+            <h3>
+              Core CS
+            </h3>
+
+            <div>
+              <span>OOP</span>
+              <span>DSA</span>
+              <span>DBMS</span>
+              <span>Operating Systems</span>
+              <span>Computer Networks</span>
+            </div>
+
           </div>
 
         </div>
@@ -535,13 +696,32 @@ function App() {
 
           <p>
             I'm interested in internships, engineering opportunities
-            and projects involving AI/ML and software development.
+            and projects involving AI/ML, software engineering and
+            full-stack development.
           </p>
 
           <div className="contact-buttons">
-            <a href="mailto:simranjitk26x@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/in/simranjit-kaur-15488331b/">LinkedIn</a>
-            <a href="https://github.com/simran-kaur5">GitHub</a>
+
+            <a href="mailto:simranjitk26x@gmail.com">
+              Email
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/simranjit-kaur-15488331b/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="https://github.com/simran-kaur5"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+
           </div>
 
         </div>
@@ -549,9 +729,14 @@ function App() {
       </section>
 
 
+      {/* FOOTER */}
+
       <footer>
 
-        <span>© 2026 Simranjit Kaur</span>
+        <span>
+          © 2026 Simranjit Kaur
+        </span>
+
       </footer>
 
     </div>
