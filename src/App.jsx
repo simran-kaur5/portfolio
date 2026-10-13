@@ -258,7 +258,7 @@ function App() {
             </p>
 
             <p className="indent">
-              cgpa: <span className="code-orange">8.83</span>
+              cgpa: <span className="code-orange">8.74</span>
             </p>
 
             <p>{"};"}</p>
